@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ali.Hosseini.Application.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Ali.Hosseini.Application.Api.Controllers.ApplicantsController.GetApplicants">
+            <summary>
+            Get all Applicants
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ali.Hosseini.Application.Api.Controllers.ApplicantsController.GetApplicant(System.Int32)">
+            <summary>
+            Return a specific Applicant
+            </summary>
+            <param name="id">Applicant ID</param>
+            <returns>Applicant</returns>
+        </member>
+        <member name="M:Ali.Hosseini.Application.Api.Controllers.ApplicantsController.PutApplicant(System.Int32,Ali.Hosseini.Application.Domain.AggregatesModel.ApplicantAggregate.Applicant)">
+            <summary>
+            Update an Applicant.
+            </summary>
+            <remarks>
+            Note that your data must meet the following validations:
+             
+                POST /Todo
+                {
+                   "id": same value with given id (integer)
+                   "name": "at least 5 Characters",
+                   "familyName": "at least 5 Characters",
+                   "address": "at least 10 Characters",
+                   "countryOfOrigin": "must be a valid Country",
+                   "eMailAddress": "must be an valid email",
+                   "age": must be between 20 and 60
+                }
+            
+            </remarks>
+            <param name="id">Applicant ID (integer)</param>
+            <param name="applicant">Applicant object</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ali.Hosseini.Application.Api.Controllers.ApplicantsController.PostApplicant(Ali.Hosseini.Application.Domain.AggregatesModel.ApplicantAggregate.Applicant)">
+            <summary>
+            Creates an Applicant.
+            </summary>
+            <remarks>
+            Note that your data must meet the following validations:
+             
+                POST /Todo
+                {
+                   "name": "at least 5 Characters",
+                   "familyName": "at least 5 Characters",
+                   "address": "at least 10 Characters",
+                   "countryOfOrigin": "must be a valid Country",
+                   "eMailAddress": "must be an valid email",
+                   "age": must be between 20 and 60
+                }
+            
+            </remarks>
+            <param name="applicant">Applicant ID</param>
+            <returns>New Created Applicant</returns>
+        </member>
+        <member name="M:Ali.Hosseini.Application.Api.Controllers.ApplicantsController.DeleteApplicant(System.Int32)">
+            <summary>
+            Delete a specific Applicant
+            </summary>
+            <param name="id">Applicant ID (integer)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ali.Hosseini.Application.Api.Startup.GetRetryPolicy">
+            <summary>
+            Configuration for Webservice resiliency and policies such as Retry, Circuit Breaker, Timeout, and Fallback in Exceptions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Ali.Hosseini.Application.Api.Startup.FallbackPolicy">
+            <summary>
+            Configuration for Fallback policies and return default response for handle Exceptions without exception in our system
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

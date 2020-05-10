@@ -18,16 +18,20 @@ Install-Package Polly -Version 7.2.1 #resilience and transient fault handling po
 
 ## Structure
 This solution has 3 projects.
-Data: is only for the persistence layer implementation(without aggregates or value object..) and you must define one repository per aggregate.
-Domain: Define aggregates, business logic.
-API: CRUD actions for aggregate and use services from the domain.
-Projects:
 
-Ali.Hosseini.Application.Data - .NetStandard 2.1 Class Library
+***Data***: is only for the persistence layer implementation(without aggregates or value object..) and you must define one repository per aggregate.
 
-Ali.Hosseini.Application.Api- .NetCore 3.1 Kestrel Host for an WebApi
+***Domain***: Define aggregates, business logic.
 
-Ali.Hosseini.Application.Domain – .NetStandard 2.1 Class Library Containing Business Logic and Models
+***API***: CRUD actions for aggregate and use services from the domain.
+
+***Projects:***
+
+* **Ali.Hosseini.Application.Data** - .NetStandard 2.1 Class Library
+
+* **Ali.Hosseini.Application.Api** - .NetCore 3.1 Kestrel Host for an WebApi
+
+* **Ali.Hosseini.Application.Domain** – .NetStandard 2.1 Class Library Containing Business Logic and Models
 ### Serilog in Startup.cs
 
 ```c#

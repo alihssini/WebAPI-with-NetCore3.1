@@ -1,3 +1,5 @@
+### Status
+[![Build Status](https://travis-ci.com/alihssini/WebAPI-with-NetCore3.1.png)](https://travis-ci.com/alihssini/WebAPI-with-NetCore3.1)
 # WebAPI-with-NetCore3.1
 
 A simple CRUD WebAPI with netcore 3.1

@@ -26,7 +26,7 @@ namespace Ali.Hosseini.Application.Tests.Core
 
             _server = new TestServer(WebHost.CreateDefaultBuilder()
                 .UseStartup<TestStartup>()
-                .UseContentRoot(applicationPath)
+                //.UseContentRoot(applicationPath)
                 .UseEnvironment("Development"));
             _client = _server.CreateClient();
 

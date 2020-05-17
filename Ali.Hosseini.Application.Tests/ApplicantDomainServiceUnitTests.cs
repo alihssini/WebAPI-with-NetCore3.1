@@ -85,10 +85,10 @@ namespace Ali.Hosseini.Application.Tests
             context.SaveChanges();
             IApplicantDomainService service = GetService<IApplicantDomainService>();
             var applicant = new Applicant { Name = "Ali_1", FamilyName = "Hosseini", Address = "Address test", Age = 35, CountryOfOrigin = "Aruba", EMailAddress = "ali.hssini@gmail.com" };
-            await service.CreateAsync(applicant);
+            var result1 = await service.CreateAsync(applicant);
             var applicant2 = new Applicant { Name = "Ali_1", FamilyName = "Hosseini", Address = "Address test", Age = 35, CountryOfOrigin = "Aruba", EMailAddress = "ali.hssini@gmail.com" };
-            await service.CreateAsync(applicant2);
-            var applicants = service.GetAll().ToList();
+            var result2 = await service.CreateAsync(applicant2);
+            var applicants = service.GetAll().Where(x => x.ID == result1.ID || x.ID == result2.ID).ToList();
             Assert.Equal(2, applicants.Count);
         }
         [Fact]
